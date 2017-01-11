@@ -1,12 +1,12 @@
-static_api_web:
+web:
     image: touchcast/docker-nginx-php7
     ports:
         - "80:80"
     volumes:
         - ./:/var/www/html
     links:
-     - static_api_db:staticapi.db
-static_api_db:
+     - db:staticapi.db
+db:
     image: mysql
     ports:
         - "3306"
