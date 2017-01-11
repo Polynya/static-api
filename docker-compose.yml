@@ -1,0 +1,17 @@
+static_api_web:
+    image: touchcast/docker-nginx-php7
+    ports:
+        - "80:80"
+    volumes:
+        - ./:/var/www/html
+    links:
+     - static_api_db:staticapi.db
+static_api_db:
+    image: mysql
+    ports:
+        - "3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_USER: drupal8user
+        MYSQL_PASSWORD: drupal8password
+        MYSQL_DATABASE: drupal8

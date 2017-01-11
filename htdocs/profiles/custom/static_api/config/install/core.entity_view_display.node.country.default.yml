@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.country.field_country_code
+    - node.type.country
+  module:
+    - user
+id: node.country.default
+targetEntityType: node
+bundle: country
+mode: default
+content:
+  field_country_code:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

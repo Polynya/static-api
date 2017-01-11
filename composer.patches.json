@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "drupal/paragraphs": {
+      "Add Multiversion support to Paragraphs": "https://www.drupal.org/files/issues/paragraphs-n2780877-4.patch"
+    }
+  }
+}

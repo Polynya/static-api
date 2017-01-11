@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.country
+  module:
+    - user
+id: node.country.teaser
+targetEntityType: node
+bundle: country
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden: {  }

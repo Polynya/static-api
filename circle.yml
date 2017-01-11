@@ -1,0 +1,12 @@
+# Configuration for Drupal testing on CircleCI.
+machine:
+  services:
+    - docker
+
+dependencies:
+  post:
+    - docker-compose up -d
+
+test:
+  override:
+    - 'curl http://localhost/cities.json'

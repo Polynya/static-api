@@ -1,0 +1,40 @@
+name: Static API
+type: profile
+description: 'Install with commonly used features pre-configured.'
+version: VERSION
+core: 8.x
+dependencies:
+  - block
+  - breakpoint
+  - ckeditor
+  - config
+  - contextual
+  - help
+  - menu_link_content
+  - datetime
+  - block_content
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - taxonomy
+  - toolbar
+  - field_ui
+  - file
+  - views
+  - views_ui
+  - automated_cron
+  - rest
+  - serialization
+  - default_content
+themes:
+  - bartik
+  - seven
+default_content:
+  node:
+    - a486fb2e-f050-4c3e-a441-d7e70e756e92
+    - ed870449-10b7-4a68-a959-6d0a7073dbb7
+    - b83510a8-e1aa-4644-84ff-52c40c5532dd
+    - f20aa280-ca37-4f41-a72b-30dc76d09830

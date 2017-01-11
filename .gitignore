@@ -1,0 +1,22 @@
+vendor
+htdocs/core
+htdocs/modules/contrib
+htdocs/themes/contrib
+htdocs/profiles/contrib
+
+# Ignore site files
+htdocs/sites/default/files/*
+
+# Ignore local services
+htdocs/sites/*/local.services.yml
+htdocs/sites/*/local.settings.php
+
+htdocs/.csslintrc
+htdocs/.editorconfig
+htdocs/.eslintignore
+htdocs/.eslintrc
+htdocs/.gitattributes
+htdocs/.htaccess
+htdocs/autoload.php
+htdocs/index.php
+htdocs/update.php
