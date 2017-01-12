@@ -6,7 +6,7 @@ db:
     MYSQL_PASSWORD: drupal8password
     MYSQL_DATABASE: drupal8
 web:
-  image: touchcast/docker-nginx-php7
+  image: richarvey/nginx-php-fpm
   ports:
     - "8888:80"
   volumes:
