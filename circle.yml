@@ -9,4 +9,4 @@ dependencies:
 
 test:
   override:
-    - 'curl http://localhost/cities.json'
+    - 'curl http://localhost:8888/cities.json'
