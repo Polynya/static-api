@@ -1,22 +1,18 @@
-version: '2'
-services:
-  db:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: drupal8user
-      MYSQL_PASSWORD: drupal8password
-      MYSQL_DATABASE: drupal8
-  web:
-    depends_on:
-       - db
-    image: touchcast/docker-nginx-php7
-    ports:
-        - "8888:80"
-    restart: always
-    volumes:
-        - .:/var/www/html
-    environment:
-      MYSQL_HOST: db:3306
-      MYSQL_PASSWORD: password
+db:
+  image: mysql:5.7
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+    MYSQL_USER: drupal8user
+    MYSQL_PASSWORD: drupal8password
+    MYSQL_DATABASE: drupal8
+web:
+  depends_on:
+     - db
+  image: touchcast/docker-nginx-php7
+  ports:
+    - "8888:80"
+  volumes:
+    - .:/var/www/html
+  environment:
+    MYSQL_HOST: db:3306
+    MYSQL_PASSWORD: drupal8password
