@@ -1,5 +1,8 @@
 db:
   image: mysql:5.7
+  ports:
+    - "3306:3306"
+  restart: always
   environment:
     MYSQL_ROOT_PASSWORD: password
     MYSQL_USER: drupal8user
@@ -11,6 +14,8 @@ web:
     - "8888:80"
   volumes:
     - .:/var/www/html
+  links:
+    - db:db
   environment:
     MYSQL_HOST: db:3306
     MYSQL_PASSWORD: drupal8password
